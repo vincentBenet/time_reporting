@@ -7,7 +7,7 @@ def main(csv_list):
         # print("path: " + str(path))
         start = False
         counter_start = 0
-        with open(path, encoding="utf-8") as csvfile:
+        with open(path, encoding="ISO-8859-1") as csvfile:
             reader = csv.reader(csvfile, delimiter=';')
             for i, row in enumerate(reader):
                 if row == []:
