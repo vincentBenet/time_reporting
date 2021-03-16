@@ -1,6 +1,6 @@
-
-
 def main(datas):
+    print("_" * 50)
+    print("Start script 'processing.py'")
     datas_transformed = []
     for data in datas:
         for i, date in enumerate(data["dates"]):
@@ -15,5 +15,8 @@ def main(datas):
                 data["offre"],
                 date
             ]
+            print("row: " + str(row))
             datas_transformed.append(row)
+    print("Finish script 'processing.py'")
+    print("datas_transformed: " + str(datas_transformed))
     return datas_transformed

@@ -1,12 +1,14 @@
 import csv
 
 def main(csv_list):
+    print("_" * 50)
+    print("Start script 'read_csv.py'")
     files = []
     for path in csv_list:
         lines = []
-        # print("path: " + str(path))
         start = False
         counter_start = 0
+        print("Open file: " + str(path))
         with open(path, encoding="cp1252") as csvfile:
             reader = csv.reader(csvfile, delimiter=';')
             for i, row in enumerate(reader):
@@ -23,6 +25,7 @@ def main(csv_list):
                     continue
                 lines.append(row)
         files.append(lines)
-        # print("nb lines: " + str(len(lines)))
-    # print("nb files: " + str(len(files)))
+        print("nb lines: " + str(len(lines)))
+    print("Finish script 'read_csv.py'")
+    print("files: " + str(files))
     return files
