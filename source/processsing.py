@@ -7,15 +7,13 @@ def main(datas):
             if date == "":
                 continue
             row = [
-                data["category"],
-                data["offre"],
-                data["theme"],
-                data["name"],
+                data["category"],                
                 "{0}/{1}/{2}".format(("00" + str(i + 1))[-2:], data["month"], data["year"]),
+                data["name"],
+                data["theme"],
                 data["tache"],
+                data["offre"],
                 date
             ]
-            # for i, cell in enumerate(row):
-                # row[i] = str(row[i]).encode("utf-8")
             datas_transformed.append(row)
     return datas_transformed
